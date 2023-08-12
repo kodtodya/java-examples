@@ -4,7 +4,7 @@ import java.util.Optional;
 
 public class OptionalDemo {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         // 1. isEmpty()
         Optional<String> optionalContainer = Optional.empty();
@@ -15,21 +15,29 @@ public class OptionalDemo {
         optionalContainer = Optional.of("pune");
 
         // 3. isPresent()
-        if(optionalContainer.isPresent())
+        if (optionalContainer.isPresent()) {
             System.out.println("Values in optional container using isPresent() : " + optionalContainer.get());
-        else
+        }
+        else {
             System.out.println("no items present");
+        }
+
+
+        System.out.println((optionalContainer.isPresent()) ? "Values in optional container using isPresent() : " + optionalContainer.get() : "no items present");
+
 
         // 4. ifPresent()
-        optionalContainer.ifPresent( item -> System.out.println("ifPresent() : " + item.length()));
+        optionalContainer.ifPresent(item -> System.out.println("ifPresent() : " + item.length()));
 
-        // 5. ofNullable()
+        // 5. map()
+        System.out.println(optionalContainer.map(s -> "Values in optional container using 'optionalContainer.map(s -> string).orElse(string)' : " + s).orElse("no items present"));
+
+        // 6. ofNullable()
         optionalContainer = Optional.ofNullable(null);
         System.out.println("Optional container made ofNullable()..");
         System.out.println("ofNullable(null) -> isEmpty()? " + optionalContainer.isEmpty());
 
-        // 6. isPresent()
+        // 7. isPresent()
         System.out.println("ofNullable(null) -> isPresent()? " + optionalContainer.isPresent());
-
     }
 }

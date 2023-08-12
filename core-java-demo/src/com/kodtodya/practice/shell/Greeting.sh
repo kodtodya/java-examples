@@ -1,4 +1,4 @@
-#!/home/kodtodya/my-space/_setup/_jvm/jdk-11/bin/java --source 11
+#!/home/kodtodya/_my-space/_setup/_jdk/_jdk-21/bin/java --source 17
 
 public class Greeting {
 
@@ -10,3 +10,7 @@ public class Greeting {
 	    }
 	  }
 }
+
+//# notes to run this file
+//# - Update the first line with your actual java installation path(i.e. JAVA_HOME path)
+//# run this file as: `./Greeting.sh <your name>` on your terminal
