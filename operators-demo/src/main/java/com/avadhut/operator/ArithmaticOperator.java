@@ -49,7 +49,12 @@ public class ArithmaticOperator {
         arithmaticOperator.addition(); // 5 + 4 = 9
         arithmaticOperator.subtraction(); // 5-4 = 1
         arithmaticOperator.multiplication(); // 5X4 = 20
-        arithmaticOperator.division(); // 5/4=1
-        arithmaticOperator.modulation(); // 5%4 = 1
+
+        if (arithmaticOperator.secondNumber != 0 || arithmaticOperator.firstNumber > 0) {
+            arithmaticOperator.division(); // 5/4=1
+            arithmaticOperator.modulation(); // 5%4 = 1
+        } else {
+            System.out.println(" execution without division and modulation..");
+        }
     }
 }
