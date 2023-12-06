@@ -1,7 +1,5 @@
 package com.kodtodya.practice.functions;
 
-import java.util.Arrays;
-import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Function;
 

@@ -29,9 +29,10 @@ public class StreamDemo {
         // using streams
         List<Float> productPriceList2 = products.stream()
             .parallel() // parallel processing
-            .filter(p -> p.price() > 30000)// filtering data
-            .map(p -> p.price())        // fetching price
-            .collect(Collectors.toList()); // collecting as list
+            .filter(product -> product.price() > 30000)// filtering data
+            .map(product -> product.price())// fetching price
+            .toList(); // collecting as list
+            //.collect(Collectors.toList()); // collecting as list
 
         System.out.println("With streams: " + productPriceList2);
 
