@@ -16,7 +16,7 @@ public class WhileLoopPattern1 {
             int column = 1;
 
             while(column <= row) {
-                System.out.print("#\t");
+                System.out.print("*\t");
                 column++;
             }
             System.out.println();
