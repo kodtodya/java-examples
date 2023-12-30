@@ -23,7 +23,7 @@ public class AbstractionDemo {
         System.out.println("--------------------------------");
         // data hiding with abstract class
         AbstractShape abstractShape = new Circle();
-        abstractShape.draw();;
+        abstractShape.draw();
 
         abstractShape = new Rectangle();
         abstractShape.draw();
