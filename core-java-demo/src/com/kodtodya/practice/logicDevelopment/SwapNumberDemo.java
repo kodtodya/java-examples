@@ -1,6 +1,6 @@
 package com.kodtodya.practice.logicDevelopment;
 
-public class SwapNumberDemo {
+public class SwapNumberDemo extends Object {
     public static void swapWithTemp(int no1, int no2) {
         System.out.println("Before swapping: no1:" + no1 + " & no2: " + no2);
 

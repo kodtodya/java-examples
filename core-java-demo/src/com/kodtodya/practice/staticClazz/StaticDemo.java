@@ -1,8 +1,11 @@
 package com.kodtodya.practice.staticClazz;
 
+import com.kodtodya.practice.staticClazz.model.Shape;
+import static com.kodtodya.practice.staticClazz.model.Shape.type;
+
 public class StaticDemo {
     public static void main(String[] args) {
-        Shape.type = "Circle";
+        type = "Circle";
 
         // circle 1 illustration
         Shape circle1 = new Shape();

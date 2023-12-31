@@ -1,18 +1,18 @@
-package com.kodtodya.practice.staticClazz;
+package com.kodtodya.practice.staticClazz.model;
 
 public class Shape {
 
-    int radius;
-    static String type;
+    public int radius;
+    public static String type;
 
     // parameterized constructor
-    Shape(int radius) {
+    public Shape(int radius) {
         this.radius = radius;
         System.out.println("Shape - parameterized constructor initialized...");
     }
 
     // no parameter constructor - default
-    Shape() {
+    public Shape() {
         System.out.println("Shape - default constructor initialized...");
     }
 

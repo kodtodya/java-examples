@@ -29,7 +29,7 @@ public class ArrayDemo {
 
         System.out.println("---------------------------------");
         System.out.println("Demo of for-each loop:");
-        // for loop demo for array
+        // for each loop demo for array
         for(int element : marks) {
             System.out.println(element);
         }
