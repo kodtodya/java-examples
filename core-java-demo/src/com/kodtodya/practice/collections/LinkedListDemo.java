@@ -1,12 +1,15 @@
 package com.kodtodya.practice.collections;
 
-import java.util.*;
+import java.util.LinkedList;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
 
-class ArrayListDemo {
+class LinkedListDemo {
 
     public static void main(String[] args) {
-        // Creating list using the ArrayList class
-        List<String> cities = new ArrayList<>();
+        // Creating list using the LinkedList class
+        List<String> cities = new LinkedList<>();
 
         // add() - Add elements to the list
         cities.add("Pune"); // index = 0
@@ -26,13 +29,9 @@ class ArrayListDemo {
         System.out.println("Remaining List: " + cities);
         System.out.println("-----------------------------");
 
-        List<String> newCitiesList = new ArrayList<>();
+        List<String> newCitiesList = new LinkedList<>();
         //addAll() - adds all elements of one list to another
-        boolean isOldListAdded = Collections.addAll(cities, "Chennai", "Jaipur", "Kolkata");
-        System.out.println("Old list is " + (isOldListAdded ? "" : "NOT ") + "update with new cities");
-
         newCitiesList.addAll(cities);
-
         newCitiesList.add("Bengaluru");
         System.out.println("New Cities List: " + newCitiesList);
         System.out.println("-----------------------------");
@@ -55,14 +54,6 @@ class ArrayListDemo {
         Iterator<String> citiesIterator = newCitiesList.iterator();
         while (citiesIterator.hasNext()) {
             System.out.println("next element in newCitiesList: " + citiesIterator.next());
-        }
-        System.out.println("-----------------------------");
-
-        //listIterator() - returns iterator object that can be used to sequentially access elements of lists
-        ListIterator<String> citiesListIterator = newCitiesList.listIterator();
-        while (citiesListIterator.hasNext()) {
-            System.out.println("next element in newCitiesList using citiesListIterator: " + citiesListIterator.next());
-            System.out.println("previous element in newCitiesList using citiesListIterator: " + citiesListIterator.previous());
         }
         System.out.println("-----------------------------");
 
