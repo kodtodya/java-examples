@@ -3,7 +3,7 @@ package com.kodtodya.practice.lambda;
 public class LambdaDemo {
 
     // class instance variable
-    private final int no = 5;
+    private final static int no = 5;
 
     public static void main(String[] args) {
 
@@ -16,17 +16,17 @@ public class LambdaDemo {
         int anotherNo = 10;
 
         // implementation of lambda
-        Demo demo = () -> {
+        Square square = (no) -> {
             // we can access global variables directly inside lambda implementation
             System.out.println("Square of no: " + no * no);
             // we can access local variables directly inside lambda implementation
             System.out.println("Square of anotherNo: " + anotherNo * anotherNo);
 
-            // local variables we use inside lambda are always final implicitely or effectively final
+            // local variables we use inside lambda are always final implicitly or effectively final
             //anotherNo = 100;
         };
 
         // actual usage of lambda
-        demo.printSquare();
+        square.printSquare(no);
     }
 }
