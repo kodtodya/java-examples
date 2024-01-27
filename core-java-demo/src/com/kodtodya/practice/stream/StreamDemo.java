@@ -39,6 +39,8 @@ public class StreamDemo {
         //-----------------------------------------------------------
         Map<Integer, Product> productMap = streamDemo.generateMapData();
 
+        System.out.println("---------------------------------");
+        System.out.println("Entry processing without stream:");
         // iterating over map using iterator
         Iterator<Entry<Integer, Product>> iterator = productMap.entrySet().iterator();
         while (iterator.hasNext()) {
@@ -47,13 +49,14 @@ public class StreamDemo {
         }
 
         System.out.println("---------------------------------");
-
+        System.out.println("Entry processing with stream:");
         // parallel stream
         productMap.entrySet().parallelStream().forEach(entry -> {
             System.out.println("Key: " + entry.getKey() + ", Value: " + entry.getValue());
         });
 
-        System.out.println("Map with streams: " + productMap);
+        System.out.println("Map processed with streams: " + productMap);
+        System.out.println("---------------------------------");
 
         // set demonstration
         Set<Product> newFilteredProductSet = productMap.entrySet().stream()
