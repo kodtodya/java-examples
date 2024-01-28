@@ -5,9 +5,9 @@ import java.io.Serializable;
 public class Student implements Serializable {
     private int rollNo;
     private String name;
-    private String address;
+    private Address address;
 
-    public Student(int rollNo, String name, String address) {
+    public Student(int rollNo, String name, Address address) {
         this.rollNo = rollNo;
         this.name = name;
         this.address = address;
@@ -20,5 +20,13 @@ public class Student implements Serializable {
                 ", name='" + name + '\'' +
                 ", address='" + address + '\'' +
                 '}';
+    }
+
+    static class Address implements Serializable {
+        String city;
+
+        public Address(String city) {
+            this.city = city;
+        }
     }
 }

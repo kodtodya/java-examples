@@ -10,9 +10,11 @@ public class SerializationDemo {
     public static void main(String[] args) {
         SerializationDemo serializationDemo = new SerializationDemo();
 
+        Student.Address peterAddress = new Student.Address("California");
+        Student.Address johnAddress = new Student.Address("California");
         // prepare data to serialize
-        Student peter = new Student(1, "Peter", "California");
-        Student john = new Student(2, "John", "Texas");
+        Student peter = new Student(1, "Peter", peterAddress);
+        Student john = new Student(2, "John", johnAddress);
 
         // serialization process
         serializationDemo.serialize(List.of(peter, john));

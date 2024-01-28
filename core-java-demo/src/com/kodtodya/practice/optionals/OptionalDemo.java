@@ -17,14 +17,11 @@ public class OptionalDemo {
         // 3. isPresent()
         if (optionalContainer.isPresent()) {
             System.out.println("Values in optional container using isPresent() : " + optionalContainer.get());
-        }
-        else {
+        } else {
             System.out.println("no items present");
         }
 
-
         System.out.println((optionalContainer.isPresent()) ? "Values in optional container using isPresent() : " + optionalContainer.get() : "no items present");
-
 
         // 4. ifPresent()
         optionalContainer.ifPresent(item -> System.out.println("ifPresent() : " + item.length()));

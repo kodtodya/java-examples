@@ -12,7 +12,9 @@ public class FunctionalInterfaceDemo {
         // explicit declaration of data type; it is being identified implicitly
         Function<String, String> lowercase = String::toLowerCase;
 
-        System.out.println(lowercase.apply("ABCDEFGHIJKLMNOPQRSTUVWXYZ"));
+        String str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        //System.out.println("lowercase string:" + str.toLowerCase());
+        System.out.println(lowercase.apply(str));
 
         Function<String[], List<String>> listCalculator = Arrays::asList;
 
