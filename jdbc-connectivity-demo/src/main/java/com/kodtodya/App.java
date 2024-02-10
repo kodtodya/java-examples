@@ -1,48 +1,65 @@
 package com.kodtodya;
 
 import com.kodtodya.service.ConnectionService;
+import com.kodtodya.service.StudentService;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.io.IOException;
+import java.util.Scanner;
 
 public class App {
 
     private static final ConnectionService connectionService = new ConnectionService();
 
-    public static void main(String[] args) {
-        // Get a database connection
-        Connection connection = connectionService.getConnection();
+    public static void main(String[] args) throws IOException {
+        StudentService studentService = new StudentService();
+        Scanner scanner = new Scanner(System.in);
+        int choice = 0;
+        do {
+            //Runtime.getRuntime().exec("reset");
+            System.out.println("*** STUDENT MANAGEMENT SYSTEM ***");
+            System.out.println("_______________________________");
+            System.out.println("Select operation:");
+            System.out.println("1. Create Employee");
+            System.out.println("2. Retrieve Employee");
+            System.out.println("3. Update Employee");
+            System.out.println("4. Delete Employee");
+            System.out.println("5. Retrieve Address");
+            System.out.println("0. Exit");
 
-        // Use the connection to execute SQL queries and interact with the database
-        try {
-            // Your database operations here...
-            Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("SELECT * FROM address");
-            System.out.println("Printing data from table: " + resultSet.getMetaData().getTableName(1));
+            System.out.print("Enter your choice: ");
+            choice = Integer.parseInt(scanner.nextLine());
 
-            System.out.println("----------------------------");
-            // Iterate over the result set
-            while (resultSet.next()) {
-                int id = resultSet.getInt("address_id"); // Replace "id" with your actual column name
-                String city = resultSet.getString("city"); // Replace "city" with your actual column name
+            switch (choice) {
+                case 1:
+                    System.out.println("Performing CREATE operation on Employee");
+                    studentService.insertStudent();
+                    break;
+                case 2:
+                    System.out.println("Performing READ operation on Employee");
+                    // Add your read logic here
+                    break;
+                case 3:
+                    System.out.println("Performing UPDATE operation on Employee");
+                    // Add your update logic here
+                    break;
+                case 4:
+                    System.out.println("Performing DELETE operation on Employee");
+                    // Add your delete logic here
+                    break;
+                case 5:
+                    System.out.println("Performing RETRIEVE operation on Address..");
 
-                // Do something with the data, e.g., print it
-                System.out.println("Address ID: " + id + ", City: " + city);
+                    studentService.retrieveAddresses().forEach(address -> {
+                        System.out.println("Address ID: " + address.getAddressId() + ", City: " + address.getCity());
+                    });
+                    break;
+                case 0:
+                    System.out.println("Exiting program");
+                    break;
+                default:
+                    System.out.println("Invalid choice");
             }
-            System.out.println("----------------------------");
-        } catch (SQLException e) {
-            System.err.println("SQL error: " + e.getMessage());
-        } finally {
-            // Close the connection when done
-            if (connection != null) {
-                try {
-                    connection.close();
-                } catch (SQLException e) {
-                    System.err.println("Error closing connection: " + e.getMessage());
-                }
-            }
-        }
+        } while (choice != 0);
+        scanner.close();
     }
 }
