@@ -41,7 +41,6 @@ build/
 .metadata
 bin/
 tmp/
-out/
 *.tmp
 *.bak
 *.swp
