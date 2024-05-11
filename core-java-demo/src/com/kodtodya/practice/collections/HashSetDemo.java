@@ -65,16 +65,16 @@ class HashSetDemo {
         System.out.println("-----------------------------");
 
         //removeAll() - removes all the elements from the set
-        System.out.println("Before removal - Cities List: " + cities);
-        System.out.println("Before removal - New Cities List: " + newCitiesSet);
-        System.out.println("removed all elements of cities list from newCitiesList: " + newCitiesSet.removeAll(cities));
-        System.out.println("After removal - Remaining New Cities List: " + newCitiesSet);
+        System.out.println("Before removal - Cities Set: " + cities);
+        System.out.println("Before removal - New Cities Set: " + newCitiesSet);
+        System.out.println("removed all elements of cities set from newCitiesSet: " + newCitiesSet.removeAll(cities));
+        System.out.println("After removal - Remaining New Cities Set: " + newCitiesSet);
         System.out.println("-----------------------------");
 
         //clear() - removes all the elements from the set (more efficient than removeAll())
-        System.out.println("Size of newCitiesList before clear(): " + newCitiesSet.size());
+        System.out.println("Size of newCitiesSet before clear(): " + newCitiesSet.size());
         newCitiesSet.clear();
-        System.out.println("Size of newCitiesList after clear(): " + newCitiesSet.size());
+        System.out.println("Size of newCitiesSet after clear(): " + newCitiesSet.size());
 
         //iterator() - returns an iterator that can be used to access elements of the set sequentially
         //remove() - removes the specified element from the set
