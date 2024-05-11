@@ -29,7 +29,8 @@ class ArrayListDemo {
         List<String> newCitiesList = new ArrayList<>();
         //addAll() - adds all elements of one list to another
         boolean isOldListAdded = Collections.addAll(cities, "Chennai", "Jaipur", "Kolkata");
-        System.out.println("Old list is " + (isOldListAdded ? "" : "NOT ") + "update with new cities");
+        System.out.println("Old list is " + (isOldListAdded ? "" : "NOT ") + "updated with new cities");
+        System.out.println("old Cities List: " + cities);
 
         newCitiesList.addAll(cities);
 
@@ -62,15 +63,12 @@ class ArrayListDemo {
         ListIterator<String> citiesListIterator = newCitiesList.listIterator();
         while (citiesListIterator.hasNext()) {
             System.out.println("next element in newCitiesList using citiesListIterator: " + citiesListIterator.next());
+        }
+        System.out.println("-----------------------------");
+        while (citiesListIterator.hasPrevious()) {
             System.out.println("previous element in newCitiesList using citiesListIterator: " + citiesListIterator.previous());
         }
         System.out.println("-----------------------------");
-
-        //set() - changes elements of lists
-        newCitiesList.set(2, "Ahmadabad");
-        while (citiesIterator.hasNext()) {
-            System.out.println("next element in newCitiesList: " + citiesIterator.next());
-        }
 
         // for each loop example
         System.out.println("Using for each loop:");
