@@ -6,6 +6,7 @@ public class InnerClassDemo {
         Car car = new Car(200, "mahindra","xuv300",engine);
         printCarDetails(car);
         printCarEngineDetails(car.engine);
+        System.out.println("Engine type:" + car.engine.engineType);
     }
 
     private static void printCarDetails(Car car) {
