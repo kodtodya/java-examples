@@ -19,7 +19,7 @@ public class ExceptionWithThrowsDemo {
         try {
             division();
         } catch (NumberFormatException ex) {
-            System.err.println(ex.getMessage());
+            System.err.println(ex);
         }
     }
 

@@ -14,7 +14,7 @@ public class ExceptionWithTryCatchDemo {
             int no1 = Integer.valueOf(firstInput);
             int no2 = Integer.valueOf(secondInput);
 
-            System.out.println("Division: ");
+            System.out.println("Division: " + (no1/no2));
         } catch (NumberFormatException exception) {
             System.err.println("entered numbers are not valid numbers.");
         }
