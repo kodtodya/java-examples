@@ -2,7 +2,11 @@ package com.kodtodya.practice.functions;
 
 public class NumberPlayground {
 
-    public boolean isPrime(int number) {
+    static {
+        System.out.println("class is being loaded in memory");
+    }
+
+    public final boolean isPrime(int number) {
         if (number <= 1) {
             return false;
         }
@@ -14,7 +18,7 @@ public class NumberPlayground {
         return true;
     }
 
-    private boolean isPalindrome(int number) {
+    private final boolean isPalindrome(int number) {
         int originalNumber = number;
         int reversedNumber = 0;
 
