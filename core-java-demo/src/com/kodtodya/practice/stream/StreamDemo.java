@@ -84,6 +84,7 @@ public class StreamDemo {
         // collect() & Collectors.toMap() demonstration
         // Function.identity() usage
         return generateListData().stream()
+           // .collect(Collectors.toMap(Product::id, product -> product));
             .collect(Collectors.toMap(Product::id, Function.identity()));
     }
 }
