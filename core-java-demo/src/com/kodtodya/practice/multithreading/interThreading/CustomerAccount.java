@@ -1,12 +1,12 @@
 package com.kodtodya.practice.multithreading.interThreading;
 
 public class CustomerAccount {
-    int amount = 10000;
+    int balance = 10000;
 
     synchronized void withdraw(int amount) {
         System.out.println("going to withdraw...");
 
-        if (this.amount < amount) {
+        if (this.balance < amount) {
             System.out.println("Less balance; waiting for deposit...");
             try {
                 wait();
@@ -14,13 +14,13 @@ public class CustomerAccount {
                 System.err.println(e.getMessage());
             }
         }
-        this.amount -= amount;
+        this.balance -= amount;
         System.out.println("withdraw completed...");
     }
 
     synchronized void deposit(int amount) {
         System.out.println("going to deposit...");
-        this.amount += amount;
+        this.balance += amount;
         System.out.println("deposit completed... ");
         notify();
     }
