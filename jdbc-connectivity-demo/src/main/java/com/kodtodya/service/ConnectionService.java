@@ -9,7 +9,7 @@ public class ConnectionService {
     public Connection getConnection() {
         Connection connection = null;
         try {
-            String url = "jdbc:mysql://localhost:3306/demodb";
+            String url = "jdbc:mysql://localhost:3306/stepupdb";
             String username = "root";
             String password = "admin";
             connection = DriverManager.getConnection(url, username, password);

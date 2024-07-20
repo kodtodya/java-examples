@@ -2,6 +2,7 @@ package com.kodtodya.service;
 
 import com.kodtodya.model.Address;
 import com.kodtodya.model.Student;
+import com.kodtodya.repository.AddressRepository;
 import com.kodtodya.repository.StudentRepository;
 
 import java.sql.SQLException;
@@ -11,10 +12,7 @@ import java.util.Scanner;
 public class StudentService {
 
     private static final StudentRepository STUDENT_REPO = new StudentRepository();
-
-    public List<Address> retrieveAddresses() {
-        return STUDENT_REPO.retrieveAddresses();
-    }
+    private static final AddressRepository ADDRESS_REPO = new AddressRepository();
 
     public void insertStudent() {
 
@@ -30,7 +28,7 @@ public class StudentService {
         System.out.println("Pls enter student grade:");
         String grade = scanner.nextLine();
 
-        Address address = STUDENT_REPO.retrieveAddress(addressId);
+        Address address = ADDRESS_REPO.retrieveAddress(addressId);
         Student student = new Student(studentId, name, address, percentage, grade);
 
         try {

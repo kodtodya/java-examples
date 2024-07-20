@@ -1,5 +1,6 @@
 package com.kodtodya;
 
+import com.kodtodya.service.AddressService;
 import com.kodtodya.service.ConnectionService;
 import com.kodtodya.service.StudentService;
 
@@ -12,6 +13,7 @@ public class App {
 
     public static void main(String[] args) throws IOException {
         StudentService studentService = new StudentService();
+        AddressService addressService = new AddressService();
         Scanner scanner = new Scanner(System.in);
         int choice = 0;
         do {
@@ -31,7 +33,7 @@ public class App {
 
             switch (choice) {
                 case 1:
-                    System.out.println("Performing CREATE operation on Employee");
+                    System.out.println("Performing CREATE operation on Student");
                     studentService.insertStudent();
                     break;
                 case 2:
@@ -49,7 +51,7 @@ public class App {
                 case 5:
                     System.out.println("Performing RETRIEVE operation on Address..");
 
-                    studentService.retrieveAddresses().forEach(address -> {
+                    addressService.retrieveAddresses().forEach(address -> {
                         System.out.println("Address ID: " + address.getAddressId() + ", City: " + address.getCity());
                     });
                     break;
