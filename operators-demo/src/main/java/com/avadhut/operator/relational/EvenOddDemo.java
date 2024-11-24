@@ -1,4 +1,4 @@
-package com.avadhut.operator;
+package com.avadhut.operator.relational;
 
 import java.util.Scanner;
 
