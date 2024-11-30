@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 
 public class RegExDemo {
 
-    public static void main(String...args){
+    public static void main(String... args) {
 
         // 1. Typical Pattern-Matcher class example
         Pattern pattern = Pattern.compile("[*aa*]");
@@ -37,7 +37,7 @@ public class RegExDemo {
             System.out.println(city);
 
         // 4. String split("regex", limit)
-        String[] citiesSplitLimit = cityContainer.split("--\\|--",3);
+        String[] citiesSplitLimit = cityContainer.split("--\\|--", 3);
         System.out.println("\nString split() limit demo:");
 
         for (String city : citiesSplitLimit)
@@ -63,7 +63,7 @@ public class RegExDemo {
             emails = reader.lines()
                     .filter(emailPattern.asMatchPredicate())
                     .collect(Collectors.toList());
-        }catch (Exception exception){
+        } catch (Exception exception) {
             System.out.println(exception.getMessage());
         }
 
@@ -79,18 +79,18 @@ public class RegExDemo {
 
         String replaced = txt.replaceAll("cat\\b", "-");
 
-        System.out.println("\"catmania this- thiscatmania\".equals(replaced) : "+"catmania this- thiscatmania".equals(replaced));
+        System.out.println("\"catmania this- thiscatmania\".equals(replaced) : " + "catmania this- thiscatmania".equals(replaced));
 
 
         // 10. word boundary beginning
         replaced = txt.replaceAll("\\bcat", "-");
 
-        System.out.println("\"-mania thiscat thiscatmania\" : "+"-mania thiscat thiscatmania".equals(replaced));
+        System.out.println("\"-mania thiscat thiscatmania\" : " + "-mania thiscat thiscatmania".equals(replaced));
 
         // 11. non word boundary-not beginning
         replaced = txt.replaceAll("\\Bcat", "-");
 
-        System.out.println("\"catmania this- this-mania\" :"+"catmania this- this-mania".equals(replaced));
+        System.out.println("\"catmania this- this-mania\" :" + "catmania this- this-mania".equals(replaced));
 
         // 12. Non word boundary not end
         replaced = txt.replaceAll("cat\\B", "-");
@@ -112,7 +112,7 @@ public class RegExDemo {
 
         // matches
         System.out.println("pattern1.matcher(txt).matches() :" + pattern1.matcher(txt).matches());
-        System.out.println("pattern2.matcher(txt).matches() : "+ pattern2.matcher(txt).matches());
+        System.out.println("pattern2.matcher(txt).matches() : " + pattern2.matcher(txt).matches());
         System.out.println("pattern_multiline1.matcher(txt).matches(): " + pattern_multiline1.matcher(txt).matches());
         System.out.println("pattern_multiline2.matcher(txt).matches() : " + pattern_multiline2.matcher(txt).matches());
 
@@ -120,7 +120,6 @@ public class RegExDemo {
         System.out.println("pattern1.matcher(txt).find(): " + pattern1.matcher(txt).find());
         System.out.println("pattern2.matcher(txt).find(): " + pattern2.matcher(txt).find());
         System.out.println("pattern_multiline1.matcher(txt).find() : " + pattern_multiline1.matcher(txt).find());
-        System.out.println("pattern_multiline2.matcher(txt).find() : "+ pattern_multiline2.matcher(txt).find());
-
+        System.out.println("pattern_multiline2.matcher(txt).find() : " + pattern_multiline2.matcher(txt).find());
     }
 }

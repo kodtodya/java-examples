@@ -29,8 +29,8 @@ public class ToArrayDemo {
         String[] java8CitiesArray = cities.toArray(new String[cities.size()]);
         System.out.println(Arrays.toString(java8CitiesArray));
 
-        // new method in java-11
-        System.out.println("List to Cities in Java 11:");
+        // new method in java-11/17
+        System.out.println("List to Cities in Java 11/17:");
         String[] java11Cities = cities.toArray(String[]::new);
         System.out.println(Arrays.toString(java11Cities));
 
@@ -42,7 +42,7 @@ public class ToArrayDemo {
         System.out.println(Arrays.toString(finalCityArray));
 
 
-        // Another exaple with integer
+        // Another example with integer
         List<Integer> numbersList = List.of(1, 2, 3, 4, 5);
 
         // old method till java-7
@@ -55,8 +55,8 @@ public class ToArrayDemo {
         Integer[] java8Numbers = numbersList.toArray(new Integer[numbersList.size()]);
         System.out.println(Arrays.toString(java8Numbers));
 
-        // new method in java-11
-        System.out.println("List to Cities in Java 11:");
+        // new method in java-11/17
+        System.out.println("List to Cities in Java 11/17:");
         Integer[] numberArray = numbersList.toArray(Integer[]::new);
         System.out.println(Arrays.toString(numberArray));
 
@@ -65,6 +65,5 @@ public class ToArrayDemo {
         numberSet.add(6);
         numberArray = numberSet.toArray(Integer[]::new);
         System.out.println(Arrays.toString(numberArray));
-
     }
 }

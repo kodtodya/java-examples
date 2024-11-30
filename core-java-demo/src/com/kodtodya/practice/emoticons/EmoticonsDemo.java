@@ -2,13 +2,13 @@ package com.kodtodya.practice.emoticons;
 
 public class EmoticonsDemo {
 	public static void main(String[] args) {
-		String startpointEmoji = "🌀";
+		String startPointEmoji = "🌀";
 
 		// If the previous line doesn't show up in your editor,
 		// you can comment it out and use this declaration instead:
-		//String startpointEmoji = "\ud83c\udf00";
+		//String startPointEmoji = "\ud83c\udf00";
 
-		int startpointEmojiCode = startpointEmoji.codePointAt(startpointEmoji.offsetByCodePoints(0, 0));
+		int startpointEmojiCode = startPointEmoji.codePointAt(startPointEmoji.offsetByCodePoints(0, 0));
 
 		System.out.println("\nSr.No.\tUnicode\t\tEmoticon\n" + "-".repeat(35));
 
