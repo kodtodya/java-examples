@@ -1,4 +1,4 @@
-package com.avadhut.operator;
+package com.avadhut.operator.equality;
 
 import java.util.Scanner;
 
@@ -14,7 +14,7 @@ public class NotEqualsToOperatorDemo {
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
 
-        if (Integer.valueOf(input) != 100) {
+        if (Integer.parseInt(input) != 100) {
             System.out.println("non-matching - non-century");
         } else {
             System.out.println("matching - century");
