@@ -1,13 +1,13 @@
-package com.avadhut.operator;
+package com.avadhut.operator.bitwise;
 
 import java.util.Scanner;
 
 public class BitwiseAndOperatorDemo {
 
     // attributes or operands
-    static int firstNumber = 0;
+    static int firstNumber;
 
-    static int secondNumber = 0;
+    static int secondNumber;
 
     // behavior or methods
     private static void bitwiseAndOperation() {
@@ -19,8 +19,8 @@ public class BitwiseAndOperatorDemo {
 
         System.out.println("Please enter 2 values:");
         Scanner scanner = new Scanner(System.in);
-        firstNumber = Integer.valueOf(scanner.nextLine());
-        secondNumber = Integer.valueOf(scanner.nextLine());
+        firstNumber = Integer.parseInt(scanner.nextLine());
+        secondNumber = Integer.parseInt(scanner.nextLine());
 
         bitwiseAndOperation();
     }

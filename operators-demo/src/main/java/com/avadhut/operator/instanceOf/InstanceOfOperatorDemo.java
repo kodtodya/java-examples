@@ -1,4 +1,4 @@
-package com.avadhut.operator;
+package com.avadhut.operator.instanceOf;
 
 public class InstanceOfOperatorDemo {
 
