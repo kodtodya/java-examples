@@ -2,7 +2,7 @@ package com.avadhut.operator.staticDemo;
 
 public class StaticDemo {
 
-    int no;
+    static int no;
 
     public static void main(String[] args) {
         StaticDemo staticDemo = new StaticDemo();
