@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class ListDemonstration {
 
-    public static void main(String[] args) {
+    public static void main(String... args) {
         String city = "Pune";
         String[] cities = new String[5];
         cities[0] = "pune";
