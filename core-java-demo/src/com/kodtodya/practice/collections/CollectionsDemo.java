@@ -25,6 +25,7 @@ public class CollectionsDemo {
 
         System.out.println("Current List: " + numberList);
 
+        // replaceAll() - replaces existing values with new values
         Collections.replaceAll(numberList, 87, 19);
         System.out.println("replaceAll operation: " + numberList);
 

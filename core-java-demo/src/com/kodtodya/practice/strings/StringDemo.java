@@ -30,7 +30,7 @@ public class StringDemo {
         System.out.println("blah.repeat(0) : " + blah.repeat(0));
         System.out.println("----------------------------");
 
-        // trip demo
+        // trim demo
         var spaceContainedString = " first-word second-word ";
         System.out.println("blah.trim() : " + blah.trim());
         System.out.println("spaceContainedString.trim() : " + spaceContainedString.trim());
@@ -86,5 +86,12 @@ public class StringDemo {
         System.out.println("blah.substring(2, 5): " + blah.substring(2, 5));
         System.out.println("blah.substring(2): " + blah.substring(2));
         System.out.println("----------------------------");
+
+
+        String firstName = new String("Avadhut");
+        System.out.println("firstname:" + firstName);
+        firstName = new String("ABCD");
+        System.out.println("firstname:" + firstName);
+
     }
 }
