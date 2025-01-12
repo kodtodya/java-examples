@@ -16,5 +16,8 @@ public class Address {
 }
 
 enum Direction {
-    EAST, WEST, SOUTH, NORTH
+    EAST("east"), WEST("west"), SOUTH("a"), NORTH("a");
+
+    Direction(String east) {
+    }
 }
