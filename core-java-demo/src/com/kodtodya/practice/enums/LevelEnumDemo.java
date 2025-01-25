@@ -10,7 +10,11 @@ public class LevelEnumDemo {
         System.out.println("Pls enter temperature level:");
         String levelString = scanner.nextLine(); // low
 
-        Level temparatureLevel = Level.valueOf(levelString);
+        Level temparatureLevel = Level.fromValue(levelString);
+
+        if (temparatureLevel == Level.HIGH) {
+            throw new Error("High temperature can not be sustained..");
+        }
 
         System.out.println("Current level: " + temparatureLevel);
 
