@@ -3,7 +3,7 @@ package com.kodtodya.practice.arrays;
 public class ArrayDemo {
 
     public static void main(String[] args) {
-        int marks[] =  new int[5];
+        int marks[] = new int[5];
         marks[0] = 45;
         marks[1] = 57;
         marks[2] = 98;

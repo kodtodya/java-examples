@@ -1,4 +1,4 @@
-package com.avadhut.operator;
+package com.avadhut.operator.bitwise;
 
 import java.util.Scanner;
 
@@ -19,8 +19,8 @@ public class BitwiseOrOperatorDemo {
 
         System.out.println("Please enter 2 values:");
         Scanner scanner = new Scanner(System.in);
-        firstNumber = Integer.valueOf(scanner.nextLine());
-        secondNumber = Integer.valueOf(scanner.nextLine());
+        firstNumber = Integer.parseInt(scanner.nextLine());
+        secondNumber = Integer.parseInt(scanner.nextLine());
 
         bitwiseOrOperation();
     }
