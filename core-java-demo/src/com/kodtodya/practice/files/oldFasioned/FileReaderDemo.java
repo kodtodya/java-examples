@@ -8,6 +8,7 @@ import java.io.Reader;
 public class FileReaderDemo {
 
     private static final String FILE_PATH = "C:\\Users\\kodtodya\\Downloads\\fileDemo\\";
+
     private static final String FILE_NAME = "text.txt";
 
     public static void main(String[] args) {

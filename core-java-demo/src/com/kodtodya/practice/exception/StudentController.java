@@ -13,6 +13,7 @@ public class StudentController {
             System.err.println(invalidMarkException.getMessage());
         } finally {
             System.out.println("finally block executed..");
+            System.gc();
         }
     }
 }

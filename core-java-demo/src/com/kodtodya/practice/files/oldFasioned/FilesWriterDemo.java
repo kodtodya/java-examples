@@ -17,7 +17,7 @@ public class FilesWriterDemo {
             // writing the content into the FileOperationExample.txt file
             fileWriter.write("This is sample data written to file..\n\nThis data is written to new line in this file.");
 
-            System.out.println("Content is successfully wrote to the file.");
+            System.out.println("Content is successfully written to the file.");
         } catch (IOException e) {
             System.err.println(e.getMessage());
             e.printStackTrace();
