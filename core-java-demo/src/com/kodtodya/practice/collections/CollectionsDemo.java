@@ -14,12 +14,19 @@ public class CollectionsDemo {
 
         System.out.println("Lowest number in list: " + Collections.min(numberList));
         System.out.println("Highest number in list: " + Collections.max(numberList));
+
+        // sort : sorting the elements in ascending order
         Collections.sort(numberList);
         System.out.println("Sorted list: " + numberList);
+        // reverse : list elements will be reversed from index point of view
         Collections.reverse(numberList);
         System.out.println("Reverse list: " + numberList);
+
+        // swap: exchange the positions of list
         Collections.swap(numberList, 0, 1);
         System.out.println("Swap operation: " + numberList);
+
+        // rotate: to rotate the elements based on distance
         Collections.rotate(numberList, 3);
         System.out.println("Rotate operation: " + numberList);
 
@@ -29,6 +36,7 @@ public class CollectionsDemo {
         Collections.replaceAll(numberList, 87, 19);
         System.out.println("replaceAll operation: " + numberList);
 
+        // shuffle: random sequence will be applied
         Collections.shuffle(numberList);
         System.out.println("Current List after shuffle: " + numberList);
 
@@ -60,6 +68,7 @@ public class CollectionsDemo {
             }
         }
         System.out.println("---------------------------------------------");
+        // nCopies: creates a copy of provided collection for number of times
         System.out.println("nCopies output: " + Collections.nCopies(2, numberList));
     }
 }
