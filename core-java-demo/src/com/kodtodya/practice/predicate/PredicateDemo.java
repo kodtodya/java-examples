@@ -10,8 +10,11 @@ public class PredicateDemo {
         System.out.println("no greater than 100? " + noGreaterThan100.test(114));
 
         Predicate<String> isStringContainsZero = (input) -> input.contains("0");
+
+        Predicate<String> isStringNotContainsZero = Predicate.not(isStringContainsZero);
         System.out.println("string contains 0? " + isStringContainsZero.test("avadhut10"));
         System.out.println("string contains 0? " + isStringContainsZero.test("0pune"));
+        System.out.println("string NOT contains 0? " + isStringNotContainsZero.test("0pune"));
     }
 
     // old-fashioned code
