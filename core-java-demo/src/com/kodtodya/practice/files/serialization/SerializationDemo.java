@@ -11,7 +11,7 @@ public class SerializationDemo {
         SerializationDemo serializationDemo = new SerializationDemo();
 
         Student.Address peterAddress = new Student.Address("California");
-        Student.Address johnAddress = new Student.Address("California");
+        Student.Address johnAddress = new Student.Address("New York");
         // prepare data to serialize
         Student peter = new Student(1, "Peter", peterAddress);
         Student john = new Student(2, "John", johnAddress);

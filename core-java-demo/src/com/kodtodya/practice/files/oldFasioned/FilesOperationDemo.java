@@ -1,8 +1,6 @@
 package com.kodtodya.practice.files.oldFasioned;
 
 import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.Arrays;
 
 public class FilesOperationDemo {

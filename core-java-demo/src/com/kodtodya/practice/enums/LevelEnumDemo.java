@@ -12,8 +12,14 @@ public class LevelEnumDemo {
 
         Level temparatureLevel = Level.fromValue(levelString);
 
-        if (temparatureLevel == Level.HIGH) {
-            throw new Error("High temperature can not be sustained..");
+//        if (temparatureLevel == Level.HIGH) {
+//            throw new Error("High temperature can not be sustained..");
+//        }
+
+        switch (temparatureLevel) {
+            case LOW -> System.out.println("Temperature level is low.");
+            case MEDIUM -> System.out.println("Temperature level is medium.");
+            case HIGH -> throw new Error("High temperature can not be sustained..");
         }
 
         System.out.println("Current level: " + temparatureLevel);
