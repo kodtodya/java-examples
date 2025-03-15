@@ -7,9 +7,13 @@ import java.util.List;
 
 public class AddressService {
 
-    private static final AddressRepository ADDRESS_REPO = new AddressRepository();
+    private static final AddressRepository addressRepository = new AddressRepository();
 
     public List<Address> retrieveAddresses() {
-        return ADDRESS_REPO.retrieveAddresses();
+        return addressRepository.retrieveAddresses();
+    }
+
+    public boolean insertAddress(Address address) {
+        return addressRepository.createAddress(address);
     }
 }

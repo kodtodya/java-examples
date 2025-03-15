@@ -20,6 +20,20 @@ public class AddressRepository {
         }
     }
 
+    public boolean createAddress(Address address) {
+        try {
+            this.initConnection();
+            Statement insertStatement = connection.createStatement();
+            boolean isInserted = insertStatement.execute("INSERT INTO address (address_id, city) "
+                    + "VALUES (" + address.getAddressId() + ", '" + address.getCity() + "');");
+
+            System.out.println(insertStatement.toString());
+            return isInserted;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     public List<Address> retrieveAddresses() {
 
         List<Address> addresses = new ArrayList<>();

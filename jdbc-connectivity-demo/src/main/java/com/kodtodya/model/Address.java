@@ -1,5 +1,6 @@
 package com.kodtodya.model;
 
+
 public class Address {
 
     private int addressId;

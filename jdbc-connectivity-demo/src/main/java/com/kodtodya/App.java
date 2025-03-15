@@ -1,5 +1,6 @@
 package com.kodtodya;
 
+import com.kodtodya.model.Address;
 import com.kodtodya.service.AddressService;
 import com.kodtodya.service.ConnectionService;
 import com.kodtodya.service.StudentService;
@@ -21,11 +22,12 @@ public class App {
             System.out.println("*** STUDENT MANAGEMENT SYSTEM ***");
             System.out.println("_______________________________");
             System.out.println("Select operation:");
-            System.out.println("1. Create Employee");
-            System.out.println("2. Retrieve Employee");
-            System.out.println("3. Update Employee");
-            System.out.println("4. Delete Employee");
+            System.out.println("1. Create Student");
+            System.out.println("2. Retrieve Student");
+            System.out.println("3. Update Student");
+            System.out.println("4. Delete Student");
             System.out.println("5. Retrieve Address");
+            System.out.println("6. Create Address");
             System.out.println("0. Exit");
 
             System.out.print("Enter your choice: ");
@@ -37,11 +39,11 @@ public class App {
                     studentService.insertStudent();
                     break;
                 case 2:
-                    System.out.println("Performing READ operation on Employee");
+                    System.out.println("Performing READ operation on Student");
                     // Add your read logic here
                     break;
                 case 3:
-                    System.out.println("Performing UPDATE operation on Employee");
+                    System.out.println("Performing UPDATE operation on Student");
                     // Add your update logic here
                     break;
                 case 4:
@@ -54,6 +56,10 @@ public class App {
                     addressService.retrieveAddresses().forEach(address -> {
                         System.out.println("Address ID: " + address.getAddressId() + ", City: " + address.getCity());
                     });
+                    break;
+                case 6:
+                    System.out.println("Performing CREATE operation on Address..");
+                    addressService.insertAddress(new Address(6,"saddsdds"));
                     break;
                 case 0:
                     System.out.println("Exiting program");

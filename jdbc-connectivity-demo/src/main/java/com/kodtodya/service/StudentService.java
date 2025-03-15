@@ -11,8 +11,8 @@ import java.util.Scanner;
 
 public class StudentService {
 
-    private static final StudentRepository STUDENT_REPO = new StudentRepository();
-    private static final AddressRepository ADDRESS_REPO = new AddressRepository();
+    private static final StudentRepository studentRepository = new StudentRepository();
+    private static final AddressRepository addressRepository = new AddressRepository();
 
     public void insertStudent() {
 
@@ -28,11 +28,11 @@ public class StudentService {
         System.out.println("Pls enter student grade:");
         String grade = scanner.nextLine();
 
-        Address address = ADDRESS_REPO.retrieveAddress(addressId);
+        Address address = addressRepository.retrieveAddress(addressId);
         Student student = new Student(studentId, name, address, percentage, grade);
 
         try {
-            if (STUDENT_REPO.insertStudent(student)) {
+            if (studentRepository.insertStudent(student)) {
                 System.out.println("Employee inserted successfully!");
             } else {
                 System.out.println("Failed to insert employee.");
